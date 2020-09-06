@@ -1,0 +1,22 @@
+<h1>Questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= link_to question.title, question, class: 'question' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question', new_question_path %> |
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %> 
